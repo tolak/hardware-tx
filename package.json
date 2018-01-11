@@ -1,0 +1,50 @@
+{
+  "name": "hardware-tx",
+  "version": "0.0.1",
+  "description": "Build transactions which can be signed by hardware wallet(e.g., BitExchange HardID and trezor).",
+  "main": "src/tx.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tolak/hardware-tx.git"
+  },
+  "author": "Wenfeng Wang <kalot.wang@gmail.com>",
+  "license": "LGPL-3.0+",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "plugins": [
+            "transform-flow-strip-types",
+            "transform-class-properties",
+            "transform-object-rest-spread",
+            "add-module-exports"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "bitcoinjs-lib": "^3.3.2",
+    "bitexchange.js-node": "^6.7.1",
+    "bower": "~1.4.1",
+    "browserify": "^15.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "bitcoin-core": "^2.0.0",
+    "browserify": "^15.0.0"
+  }
+}
